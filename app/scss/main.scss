@@ -1,0 +1,770 @@
+
+@import "vars";
+@import "libs";
+@import "fonts";
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-family: 'Gilroy', sans-serif;
+    font-size: vw(16);
+    line-height: vw(24);
+    color: $main-color;
+    @include for-xl(){
+        font-size: 48px;
+        line-height: 62px;
+    }
+
+    @include for-md(){
+        font-size: vw2(16);
+        line-height: vw2(28);
+       
+    }
+}
+.container{
+    max-width: 65.15812vw;
+    width: 100%;
+    padding-right: vw(70);
+    margin: 0 auto;
+    box-sizing: border-box;
+    @include for-lg(){
+        padding-right: 5.5243vw;
+    }
+    @include for-xl(){
+        max-width: 2140px;
+        padding-right: 0;
+    }
+    @include for-md(){
+        max-width: 100%;
+        padding: 0 4.8625vw;
+    }
+    &--big{
+        max-width: vw(1732);
+        padding-right: vw(55);
+        @include for-lg(){
+            padding-right: 4.98338vw;
+        }
+        @include for-xl(){
+            max-width: 2400px;
+            padding-right: 0;
+        }
+        @include for-md(){
+            max-width: 100%;
+            padding: 0 4.8625vw;
+        }
+    }
+    &--medium{
+       padding-right: 0;
+    //    margin-right: - vw(200);
+    }
+    &--relative{
+        position: relative;
+    }
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include for-md(){
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        
+        background-color: $footer-color;
+        padding: 15px 0;
+        z-index: 1000;
+    }
+    &__row{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: vw(70);
+        @include for-lg(){
+            padding-top: 2.78184vw;
+
+        }
+        @include for-xl(){
+            padding-top: 105px;
+        }
+        @include for-md(){
+           padding-top: 20px;
+           justify-content: space-between;
+           align-items: center;
+        }
+    }
+    &__logo{
+        height: vw(18);
+        width: vw(91);
+        position: fixed;
+        top: vw(33);
+        left: vw(34);
+        z-index: 5000;
+        @include for-lg(){
+            height: 1.82911vw;
+            width: 8.84159vw;
+        }
+        @include for-xl(){
+            height: 63px;
+            width: 318px;
+            top:115.5px;
+        }
+        @include for-md(){
+            height: vw2(18);
+            width: vw2(91);
+            top: auto;
+            position: static;
+        }
+        svg{
+            max-width: 100%;
+            max-height: vw(18);
+            @include for-md(){
+                max-height: vw2(18);
+            }
+        }
+        // @include for-xl(){}
+        
+    }
+    &__email{
+        display: flex;
+        align-items: center;
+        color: $main-color;
+        text-decoration: none;
+        font-weight: 600;
+        position: fixed;
+        top: vw(30);
+        &:hover{
+            color: $link-color;
+        }
+
+        span:not(.email__arrow){
+            font-family: 'Arial';
+        }
+        @include for-md(){
+            // display: none;
+            // position: absolute;
+            // right: 0;
+            // top: vw2(30);
+            position: static;
+        }
+    }
+}
+.email{
+    font-size: vw(18);
+    line-height:1.1;
+    font-weight: 600;
+    @include for-md(){
+        font-size: vw2(18);
+    }
+    &__arrow{
+        color: $link-color;
+        margin-right: vw(4);
+        padding-top: vw(4);
+       
+        @include for-xl(){
+            margin-right: 14px;
+        }
+        @include for-md(){
+            margin-right: 4px;
+        }
+
+    }
+}
+.email-container{
+    margin-top: vw(8);
+    margin-bottom: vw(57);
+    @include for-xl(){
+        margin-top: 24px;
+        margin-bottom: 100px;
+    }
+}
+.hero{
+    padding-top: vw(120);
+    @include for-xl(){
+        padding-top: 262px;
+    }
+    @include for-md(){
+        padding-top: vw2(110);
+    }
+    &__row{
+        margin-top: vw(60);
+
+        display: flex;
+        align-items: center;
+        @include for-lg(){
+            margin-top: 5.49369vw;
+        }
+        @include for-xl(){
+            margin-top: 210px;
+        }
+        @include for-md(){
+            margin-top: 60px;
+        }
+    }
+    &__slider{
+        position: relative;
+        overflow: hidden;
+        margin: 0 vw(20);
+        @include for-lg(){
+            margin: 0px 2.6vw 0 2.54246vw;
+            top: 0.6vw;
+        }
+        @include for-xl(){
+            margin: 0 70px;
+        }
+        @include for-md(){
+            margin: 0 vw(15);
+        }
+    }
+    &__svg-container{
+        height: vw(42);
+        @include for-xl(){
+            height: 172px;
+        }
+        @include for-md(){
+            height: vw2(34);
+        }
+        flex-shrink: 0;
+        svg{
+            height: 100%;
+            max-width: 100%;
+            @include for-xl(){
+                height: 172px;
+            }
+            @include for-lg(){
+                height: 4.93458vw;
+            }
+            @include for-md(){
+                height: vw2(34);
+            }
+        }
+    }
+    &__slider{
+        img{
+            max-width: 100%;
+        }
+    }
+    p{
+        font-size: vw(20);
+        line-height: vw(34);
+        @include for-lg(){
+            font-size: 1.93123vw;
+            line-height: 3.1709vw;
+        }
+        @include for-xl(){
+            font-size: 70px;
+            line-height: 102px;
+        }
+        @include for-md(){
+            font-size: vw2(16);
+            line-height: vw2(28);
+        }
+    }
+}
+.title{
+    font-size: vw(40);
+    margin-top: 0;
+    line-height: vw(52);
+    font-weight: 600;
+    
+   
+    @include for-lg(){
+        font-size: 3.87246vw;
+        line-height: 5vw;
+    }
+    @include for-xl(){
+        font-size: 140px;
+        line-height: 182px;
+    }
+    @include for-md(){
+        font-size: vw2(32);
+        line-height: vw2(40);
+        br{
+            display: none;
+        }
+    }
+}
+.title+.subtitle{
+    margin-top: vw(40);
+    @include for-lg(){
+        margin-top: 4.54246vw;
+    }
+    @include for-xl(){
+        margin-top: 140px;
+    }
+    @include for-md(){
+        margin-top: vw2(20);
+    }
+}
+.subtitle + p{
+    margin-top: vw(20);
+    @include for-lg(){
+        margin-top: 1.72123vw;
+    }
+    @include for-xl(){
+        margin-top: 70px;
+    }
+    @include for-md(){
+        margin-top: vw2(25);
+    }
+}
+.subtitle{
+    font-size: vw(20);
+    line-height: vw(32);
+    font-weight: 600;
+    margin: 0;
+    @include for-xl(){
+        font-size: 70px;
+        line-height: 112px;
+    }
+    @include for-md(){
+        font-size: vw2(20);
+       line-height: vw2(32);
+    }
+}
+p{
+    font-weight: 500;
+    // margin-bottom: 0;
+}
+p + .subtitle{
+    margin-top: vw(20);
+    @include for-lg(){
+        margin-top: 1.72123vw;
+    }
+    @include for-xl(){
+        margin-top: 70px;
+    }
+    @include for-md(){
+        margin-top: vw2(25);
+    }
+}
+.title + p{
+    margin-top: vw(24);
+    @include for-lg(){
+        margin-top: 2.10548vw;
+    }
+    @include for-xl(){
+        margin-top: 84px;
+    }
+    @include for-md(){
+        margin-top: 24px;
+    }
+}
+p+p{
+    margin-top: vw(28);
+    @include for-lg(){
+        margin-top: 2.98972vw;
+    }
+    @include for-xl(){
+        margin-top: 98px;
+    }
+    @include for-md(){
+        margin-top: 28px;
+    }
+}
+.footer{
+    position: relative;
+    z-index: 60;
+    margin-top: 10.20768vw;
+    background-color: $link-color;
+    color: $footer-color;
+    padding: vw(40) 0;
+    @include for-xl(){
+        margin-top: 430px;
+        padding: 227px 0 210px;
+    }
+    @include for-md(){
+        // margin-top: 40px;
+        padding: vw2(70) 0 vw2(45);
+        margin-top: 0;
+    }
+    &__link{
+        // font-size: vw(28);
+        // line-height:1.1;
+        text-decoration: none;
+        color: $footer-color;
+        font-weight: 600;
+        padding-bottom: vw(2);
+
+        
+        // @include for-xl(){
+        //     font-size: 120px;
+        //     line-height: 142px;
+        //     padding-bottom: 17.5px;
+        // }
+        @include for-md(){
+            font-size: vw2(18);
+            line-height: vw2(24);
+        }
+        &:hover{
+            color: rgb(238, 238, 238) !important;
+            background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%) 0px 100% / vw(1) vw(2) repeat-x;
+        }
+        span:not(.footer__link-arrow){
+            font-family: 'Arial';
+            font-weight: 500;
+        }
+    }
+    &__list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        // display: flex;
+        // // padding: 0 20px;
+        // box-sizing: border-box;
+        // margin: 0 -20px;
+        // &-item{
+        //     padding: 0 20px;
+        // }
+
+        &-item + &-item{
+            margin-top: vw(2);
+            @include for-md(){
+                margin-top: vw2(15);
+            }
+        }
+        @include for-md(){
+            flex-direction: column;
+        }
+    }
+    &__link-title{
+        // font-size: vw(25);
+        // line-height: vw(30);
+        margin-bottom: vw(0);
+        @include for-md(){
+            font-size: vw2(16);
+        }
+        
+    }
+    &__copy{
+        font-size: vw(28);
+        line-height:1.1;
+        font-weight: 500;
+        margin-top: vw(40);
+        @include for-lg(){
+            margin-top: 5.10307vw;
+        }
+        @include for-xl(){
+            font-size: 70px;
+            line-height: 80px;
+            margin-top: 175px;
+        }
+        @include for-md(){
+            font-size: vw2(20);
+            line-height: vw2(23);
+            margin-top: vw2(50);
+        }
+        
+    }
+}
+.risk{
+    position: relative;
+    overflow: hidden;
+    margin-top: vw(130);
+    @include for-lg(){
+        margin-top: 15.28799vw;
+        p{
+            line-height: 2.70548vw;
+        }
+    }
+    @include for-xl(){
+        margin-top: 455px;
+}
+@include for-md(){
+    margin-top: vw2(100);
+    .title{
+        font-size: vw2(40);
+        line-height: vw2(52);
+    }
+}
+    img{
+        position: absolute;
+        left: 80%;
+        height: vw(450);
+        width: vw(450);
+        border-radius: 50%;
+        top: vw(350);
+        @include for-xl(){
+            top: 525px;
+            height: 1100px;
+            width: 1100px;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin: vw2(30) auto;
+        }
+    }
+}
+.increase{
+    position: relative;
+    overflow: hidden;
+    margin-top: vw(130);
+    @include for-lg(){
+        margin-top: 13.58799vw;
+        p{
+            line-height: 2.70548vw;
+        }
+    }
+    @include for-xl(){
+        
+        margin-top: 455px;
+        p{
+            line-height: 68px;
+        }
+}
+@include for-md(){
+    margin-top: 50px;
+    .title{
+        font-size: vw2(40);
+        line-height: vw2(52);
+    }
+}
+    img{
+        position: absolute;
+        left: 80%;
+        height: vw(450);
+        width: vw(450);
+        border-radius: 50%;
+        top: vw(150);
+        @include for-xl(){
+            top: 525px;
+            height: 1100px;
+            width: 1100px;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin: vw2(30) auto;
+            
+        }
+
+    }
+}
+.platform{
+    margin-top: vw(130);
+    position: relative;
+    overflow: hidden;
+    z-index: 60;
+    background: $footer-color;
+    @include for-lg(){
+        margin-top: 11.88799vw;
+    }
+    @include for-xl(){
+            margin-top: 455px;
+    }
+    @include for-md(){
+        margin-top: vw2(100);
+        .title{
+            font-size: vw2(40);
+            line-height: vw2(52);
+        }
+    }
+    &__line{
+        margin-top: vw(75);
+        
+        height: vw(3);
+        background-color: $link-color;
+         width: 65%;
+        transition: .3s;
+
+        transition-property:opacity,transform,width !important;
+        &.aos-animate{
+           width: 100%;
+        }
+        @include for-lg(){
+            margin-top: 7.50461vw;
+        }
+        @include for-xl(){
+            margin-top: 262px;
+            height: 10.5px;
+        }
+        @include for-md(){
+            margin-top: 43px;
+            height: 3px;
+            position: relative;
+            top: 7px;
+            display: none;
+        }
+    }
+    &__list-container{
+        // @include for-md(){
+        //     position: relative;
+        //     overflow-x: auto;
+        //     overflow-y: visible;
+        // }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: - vw(200);
+        @include for-lg(){
+            margin-right: -22.2123vw;
+        }
+        @include for-md(){
+            // margin-right: -20px;
+            // width: 800px;
+            margin-right: 0;
+            flex-direction: column;
+            position: relative;
+            margin-top: vw2(30);
+            padding-bottom: vw2(30);
+            &:before{
+                content: '';
+                position: absolute;
+               
+                height: 100%;
+                width: vw2(3);
+                background-color: $link-color;
+                left: vw2(6);
+            }
+        }
+        // @include for-xl(){
+        //     margin-right: -700px;
+        // }
+    }
+    &__list-item{
+        position: relative;
+        padding-right: vw(30);
+        box-sizing: border-box;
+        width: 33.3%;
+        padding-top: 2.65821vw;
+       
+        @include for-xl(){
+            padding-top: 126px;
+        }
+        @include for-lg(){
+            padding-right: 1vw;
+            .subtitle+p{
+                line-height: 2.6vw;
+            }
+        }
+        @include for-md(){
+            padding-top: 0;
+            padding-right: 0;
+            width: 100%;
+            padding-left: vw2(35);
+            
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+          
+            top: -0.87243vw;
+            height: 1.6vw;
+            width: 1.6vw;
+            border-radius: 50%;
+            background-color: $link-color;
+            @include for-xl(){
+                top: -24.5px;
+
+                height: 42px;
+                width: 42px;
+            }
+            @include for-md(){
+                height: vw2(16);
+                width: vw2(16);
+               
+                top: 0;
+                left: 0;
+            }
+        }
+       
+        
+    }
+}
+p br{
+    @include for-md(){
+        display: none;
+    }
+}
+.media{
+    margin-top: vw(130);
+    position: relative;
+    overflow: hidden;
+    .title{
+        margin-bottom: vw(60);
+        @include for-lg(){
+            margin-bottom: 70px;
+        }
+    }
+    p{
+        font-size: vw(23);
+        line-height: vw(31);
+        margin-bottom: 0;
+        @include for-xl(){
+            font-size: 48px;
+            line-height: 62px;
+        }
+    
+        @include for-md(){
+            font-size: vw2(16);
+            line-height: vw2(28);
+           
+        }
+
+    }
+   
+    @include for-lg(){
+        margin-top: 11.88799vw;
+    }
+    @include for-xl(){
+            margin-top: 455px;
+    }
+    @include for-md(){
+        margin-top: vw2(100);
+        .title{
+            font-size: vw2(40);
+            line-height: vw2(52);
+        }
+    }
+    .email{
+        color: $main-color;
+        text-decoration: none;
+        font-size: vw(25);
+        line-height: vw(33);
+        @include for-xl(){
+            font-size: 64px;
+            line-height: 1.1;
+        }
+        @include for-md(){
+            font-size: vw2(18);
+            line-height: vw2(24);
+        }
+        
+    }
+    .email__link-arrow{
+        color: $link-color;
+    
+    }
+    img{
+        position: absolute;
+        left: 80%;
+        height: vw(450);
+        width: vw(450);
+        border-radius: 50%;
+        top: vw(0);
+        @include for-xl(){
+            top: 525px;
+            height: 1100px;
+            width: 1100px;
+        }
+        @include for-md(){
+            position: static;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin: vw2(30) auto;
+    //         max-height: 640px;
+    // max-width: 100%;
+    // height: 100%;
+        }
+    }
+}
